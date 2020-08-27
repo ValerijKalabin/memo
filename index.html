@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>МЕМО</title>
+</head>
+<body class="page">
+    <div class="page__container">
+        <header class="header">
+            <h1 class="header__title">МЕМО</h1>
+            <menu class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">Новая игра</li>
+                    <li class="header__menu-item">Количество карточек</li>
+                    <li class="header__menu-item">Ваша статистика</li>
+                </ul>
+            </menu>
+        </header>
+        <section class="field">
+            <ul class="cards"></ul>
+        </section>
+        <footer class="footer">
+            <p class="footer__copyright">&copy; Валерий Калабин</p>
+        </footer>
+    </div>
+    <div class="popup popup_type_pairs">
+        <div class="popup__container">
+            <h2 class="popup__title">
+                Сколько пар карточек хотите открыть?
+            </h2>
+            <p class="popup__subtitle">
+                Количество пар карточек должно быть кратно трём.
+            </p>
+            <form class="popup__form" action="./index.html" method="post">
+                <input class="popup__input" type="number" name="pairs" id="pairs" min="3" step="3">
+                <button class="popup__button" type="submit">
+                    Сохранить
+                </button>
+                <button class="popup__button" type="button">
+                    Закрыть
+                </button>
+            </form>
+        </div>
+    </div>
+    <template id="template-card">
+        <li class="card">
+            <h2 class="card__title">мемо</h2>
+        </li>
+    </template>
+    <script src="index.js"></script>
+</body>
+</html>
